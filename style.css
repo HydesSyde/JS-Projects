@@ -12,6 +12,10 @@ body {
   background: linear-gradient(#e66455, #9198e5);
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   background-color: #ffffff;
   height: 50vh;
@@ -19,6 +23,7 @@ body {
   transform: translate(50%, 60%);
   border-radius: 5px;
   position: absolute;
+  z-index: 0;
 }
 
 .image-container {
@@ -41,4 +46,54 @@ body {
 
 .image-container .active {
   display: block;
+}
+
+.button-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.right,
+.left {
+  cursor: pointer;
+}
+
+.arrow {
+  background-color: #9198e5;
+  font-size: 1.5rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.circle-container {
+  position: relative;
+  top: 80px;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.circle {
+  background-color: #ffffff;
+  border: 5px solid #9198e5;
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .circle-container {
+    width: 40%;
+  }
+  .circle {
+    border: 2px solid #9198e5;
+  }
 }

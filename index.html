@@ -9,22 +9,27 @@
   <body>
     <div class="container">
       <div class="image-container">
-        <img src="images/Image1.jpg" alt="image1" class="image1 active" />
-        <img src="images/Image2.jpg" alt="image2" class="image2" />
-        <img src="images/Image3.jpg" alt="image3" class="image3" />
-        <img src="images/Image4.jpg" alt="image4" class="image4" />
-        <img src="images/Image5.jpg" alt="image5" class="image5" />
+        <img
+          src="images/Image1.jpg"
+          alt="image1"
+          class="image active"
+          id="content1"
+        />
+        <img src="images/Image2.jpg" alt="image2" class="image" id="content2" />
+        <img src="images/Image3.jpg" alt="image3" class="image" id="content3" />
+        <img src="images/Image4.jpg" alt="image4" class="image" id="content4" />
+        <img src="images/Image5.jpg" alt="image5" class="image" id="content5" />
       </div>
-      <div>
-        <button onclick="prev()">&lt;</button>
-        <button onclick="next()">&gt;</button>
+      <div class="button-container">
+        <button onclick="prev()" class="arrow left">&lt;</button>
+        <button onclick="next()" class="arrow right">&gt;</button>
       </div>
-      <div>
-        <button onclick=""></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+      <div class="circle-container">
+        <button onclick="" class="circle"></button>
+        <button class="circle"></button>
+        <button class="circle"></button>
+        <button class="circle"></button>
+        <button class="circle"></button>
       </div>
     </div>
     <script src="myscript.js"></script>

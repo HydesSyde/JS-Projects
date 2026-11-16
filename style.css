@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.card-Container {
+  width: 300px;
+  height: 400px;
+  position: relative;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s,
+    opacity 0.3s ease;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 130px;
+}
+
+.card:not(:last-child) {
+  top: 5px;
+}

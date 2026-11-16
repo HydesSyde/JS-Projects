@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Projects</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img
+          src="images/Image1.jpg"
+          alt="image1"
+          class="image active"
+          id="content1"
+        />
+        <img src="images/Image2.jpg" alt="image2" class="image" id="content2" />
+        <img src="images/Image3.jpg" alt="image3" class="image" id="content3" />
+        <img src="images/Image4.jpg" alt="image4" class="image" id="content4" />
+        <img src="images/Image5.jpg" alt="image5" class="image" id="content5" />
+      </div>
+      <div class="button-container">
+        <button onclick="prev()" class="arrow left">&lt;</button>
+        <button onclick="next()" class="arrow right">&gt;</button>
+      </div>
+      <div class="circle-container">
+        <button onclick="dot(1)" class="circle"></button>
+        <button onclick="dot(2)" class="circle"></button>
+        <button onclick="dot(3)" class="circle"></button>
+        <button onclick="dot(4)" class="circle"></button>
+        <button onclick="dot(5)" class="circle"></button>
+      </div>
+    </div>
+    <script src="imageSlider.js"></script>
+  </body>
+</html>

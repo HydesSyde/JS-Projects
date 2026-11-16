@@ -89,6 +89,10 @@ button {
   cursor: pointer;
 }
 
+.circle-container button:nth-child(1) {
+  background-color: #9198e5;
+}
+
 @media (max-width: 430px) {
   .circle-container {
     width: 40%;

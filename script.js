@@ -4,6 +4,7 @@ const container = document.getElementById("cardContainer");
 let startX = 0; //horizontal position
 let isDragging = false; //checks if user is dragig or not
 let currentCard = null; //checks the currently selected card.
+let lastChild = null; //check the last card
 
 //array of card colors
 const cardColors = [
@@ -19,6 +20,15 @@ const cardColors = [
   "#6a3d9a",
 ];
 
+function getLastCard() {
+  return container.querySelector(".card:first-child");
+}
+
+//a function to get the top card of the stacked cards
+function getTopCard() {
+  return container.querySelector(".card:last-child");
+}
+
 //loop through all the cardcolors and assign each a color from the array
 for (let i = cardColors.length; i >= 1; i--) {
   const card = document.createElement("div");
@@ -29,13 +39,19 @@ for (let i = cardColors.length; i >= 1; i--) {
   cardContent.className = "card-content";
   cardContent.textContent = i;
 
-  container.appendChild(card);
   card.appendChild(cardContent);
-}
+  container.appendChild(card);
 
-//a function to get the top card of the stacked cards
-function getTopCard() {
-  return container.querySelector(".card:last-child");
+  //failed attempt to reset
+  // function reset() {
+  //   lastChild = getLastCard();
+  //   currentCard = getTopCard();
+  //   if (lastChild) {
+  //     container.appendChild(card);
+  //   }
+  // }
+
+  // reset();
 }
 
 //an event listener to engage the mouse position, get top card, set isdragging;
@@ -116,3 +132,23 @@ function handleSwipe(deltaX) {
 
   isDragging = false;
 }
+
+//failed function to reset code
+function reset() {
+  container.innerHTML = "";
+
+  for (let i = cardColors.length; i >= 1; i--) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.style.backgroundColor = cardColors[i - 1];
+
+    const cardContent = document.createElement("div");
+    cardContent.className = "card-content";
+    cardContent.textContent = i;
+
+    card.appendChild(cardContent);
+    container.appendChild(card);
+  }
+}
+
+reset();
